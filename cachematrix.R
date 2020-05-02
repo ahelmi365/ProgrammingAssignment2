@@ -4,6 +4,20 @@
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
+        m <- NULL
+        set <- function(y) { #set vect X to be = y
+                x <<- y
+                m <<- NULL
+        }
+        get <- function() x # get the vect X
+        
+        setmean <- function(mean) m <<- mean
+        getmean <- function() m
+        
+        
+        list(set = set, get = get,
+             setmean = setmean,
+             getmean = getmean)
 
 }
 
